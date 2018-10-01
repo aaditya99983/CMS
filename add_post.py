@@ -1,4 +1,5 @@
 def add_post():
+    title=input("Enter Post Title: ")
     post=input("Enter Post: ")
     counter=open("count.cms","r")
     count=int(counter.read())
@@ -8,8 +9,9 @@ def add_post():
     counter.write(str(count+1))
     counter.close()
     file.write("<HTML>\n")
-    file.write("<Title>"+post+"</Title>")
+    file.write("<Title>"+title+"</Title>")
     file.write("<Body>")
+    file.write("<H1>"+title+"</H1>")
     file.write("<p>"+post+"</p>")
     file.close()
     file2=open("index.html","a+")
