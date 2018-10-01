@@ -12,6 +12,9 @@ def add_post():
     file.write("<Body>")
     file.write("<p>"+post+"</p>")
     file.close()
+    file2=open("index.html","a+")
+    file2.write("<a href=\""+str(count)+".html\">"+str(count)+"</a>")
+    file2.close()
     print("Post Added Successfully")
 
 if __name__=="__main__":
